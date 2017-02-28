@@ -1,0 +1,17 @@
+// code goes here  
+function FirstReverse(str) { 
+
+  // code goes here  
+  var fresh =[];
+  if(str.length >0){
+      for(var num = str.length; num>=0 ; num--){
+          fresh.push(str[num-1]);
+      }
+  }
+  str = fresh.join("");
+  return str; 
+         
+}
+   
+// keep this function call here 
+FirstReverse(readline());
