@@ -1,0 +1,15 @@
+function isPrime(num){
+  absoluteNumber = Math.abs(num);
+  var flg =0;
+  if(absoluteNumber > 2){
+    for(var num=2; num<absoluteNumber; num++){
+        if(absoluteNumber % num ==0){
+	  return false;
+	}
+  }
+  return true;
+}
+else{
+return falase
+}
+}
