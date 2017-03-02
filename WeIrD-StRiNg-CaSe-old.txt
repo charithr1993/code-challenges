@@ -1,0 +1,46 @@
+function toWeirdCase(string){
+  //TODO
+  var text = string;
+  var numberOfWords = text.split(" ");
+  console.log(numberOfWords);
+  if(numberOfWords.length === 1){
+   var answer = one(string);
+   return answer;
+  }
+  else{
+    var answer = moreThanOne(string);
+    return answer;
+  }
+}
+
+function one(string){
+  var letters = string.split('');
+  for(var index = 0; index < letters.length; index++){
+    if(index % 2 ===0){
+      letters[index] = letters[index].toUpperCase();
+    }
+    else{
+     letters[index] = letters[index].toLowerCase();
+    }
+  }  
+return letters.join('');
+}
+
+function moreThanOne(string){
+  var newString2 = [];
+  var items = string.split(" ");
+  for(var item = 0; item<items.length; item++){
+      var word = items[item].split('');
+      for(var index = 0; index < word.length; index++){
+        if(index % 2 ===0){
+          word[index] = word[index].toUpperCase();
+        }
+        else{
+          word[index] = word[index].toLowerCase();
+        }
+      }
+      newString2.push(word.join(''));
+  }
+  return newString2.join(' ');
+
+}
