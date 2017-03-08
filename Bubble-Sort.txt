@@ -1,0 +1,19 @@
+ public static int[] bubbleSort(int[] numberSet)
+        {
+            int count = 1;
+            while (numberSet.Length > count)
+            {
+                for (int i = 0; i < numberSet.Length - 1; i++)
+                {
+                    if (numberSet[i] > numberSet[i + 1])
+                    {
+                        int temp = numberSet[i];
+                        numberSet[i] = numberSet[i + 1];
+                        numberSet[i + 1] = temp;
+                    }
+                }
+                count++;
+            }
+            return numberSet;
+
+        }
