@@ -1,0 +1,18 @@
+public static int[] insertionSort(int[] numberSet)
+        {
+            for (int i = 1; i < numberSet.Length; i++)
+            {
+                for (int j = i; j > 0; j--)
+                {
+                    if (numberSet[j] < numberSet[j - 1])
+                    {
+                        int temp = numberSet[j];
+                        numberSet[j] = numberSet[j - 1];
+                        numberSet[j - 1] = temp;
+                    }
+                }
+            }
+
+            return numberSet;
+
+        }
