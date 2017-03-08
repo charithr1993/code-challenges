@@ -1,0 +1,25 @@
+   public static int[] selectionSort(int[] numberSet)
+        {
+            for (int i = 0; i < numberSet.Length - 1; i++)
+            {
+                int minimumIndex = i;
+
+                for (int j = i + 1; j < numberSet.Length; j++)
+                {
+                    if (numberSet[minimumIndex] > numberSet[j])
+                    {
+
+                        minimumIndex = j;
+                    }
+                }
+                if (minimumIndex != i)
+                {
+                    int temp = numberSet[i];
+                    numberSet[i] = numberSet[minimumIndex];
+                    numberSet[minimumIndex] = temp;
+                }
+
+            }
+
+            return numberSet;
+        }
